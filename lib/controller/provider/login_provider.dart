@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginNotifier extends Notifier<LoginState> {
+class LoginNotifier extends Notifier<LoginProviderState> {
   @override
-  LoginState build() {
-    return const LoginState();
+  LoginProviderState build() {
+    return const LoginProviderState();
   }
 
   final _auth = FirebaseAuth.instance;
@@ -46,6 +46,6 @@ class LoginNotifier extends Notifier<LoginState> {
   }
 }
 
-final loginProvider = NotifierProvider<LoginNotifier, LoginState>(
+final loginProvider = NotifierProvider<LoginNotifier, LoginProviderState>(
   () => LoginNotifier(),
 );

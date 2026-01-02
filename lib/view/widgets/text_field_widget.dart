@@ -77,7 +77,7 @@ class TextFieldWidget extends StatelessWidget {
                     child: Text(
                       "$currentLength / $maxLength",
                       style: TextStyle(
-                        color: currentLength > maxLength!
+                        color: currentLength == maxLength!
                             ? Colors.red
                             : Colors.grey,
                         fontSize: 8,
@@ -88,9 +88,6 @@ class TextFieldWidget extends StatelessWidget {
           style: TypographyStyles.normal14(),
           decoration: InputDecoration(
             hintText: hintText,
-            counterText: maxLength == null
-                ? null
-                : "${controller.text.length}/$maxLength",
             hintStyle: TypographyStyles.normal12(Colors.grey),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
           ),

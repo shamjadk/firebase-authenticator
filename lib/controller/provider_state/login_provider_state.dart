@@ -1,13 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginState {
+class LoginProviderState {
   final bool isLoading;
   final UserCredential? userDetails;
 
-  const LoginState({this.isLoading = false, this.userDetails});
+  const LoginProviderState({this.isLoading = false, this.userDetails});
 
-  LoginState copyWith({bool? isLoading, UserCredential? userDetails}) {
-    return LoginState(
+  LoginProviderState copyWith({bool? isLoading, UserCredential? userDetails}) {
+    return LoginProviderState(
       isLoading: isLoading ?? this.isLoading,
       userDetails: userDetails,
     );
