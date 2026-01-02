@@ -5,6 +5,18 @@ allprojects {
     }
 }
 
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Firebase / Google Services plugin (Kotlin DSL syntax)
+        classpath("com.android.tools.build:gradle:8.2.1") // your AGP version
+        classpath("com.google.gms:google-services:4.4.0") // <- Kotlin DSL requires parentheses and double quotes
+    }
+}
+
 val newBuildDir: Directory =
     rootProject.layout.buildDirectory
         .dir("../../build")
