@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Firebase Authenticator',
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.blue)),
       home: const LoginScreen(),
     );
   }

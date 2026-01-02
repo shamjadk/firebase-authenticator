@@ -48,6 +48,9 @@ class LoginScreen extends HookConsumerWidget {
                   enabled: !loginState.isLoading,
                   inputType: InputType.password,
                 ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text("Forgot password?",style: TypographyStyles.normal12(Colors.blue),)),
                 SizedBox(height: 56),
                 PrimaryButtonWidget(
                   isLoading: loginState.isLoading,
