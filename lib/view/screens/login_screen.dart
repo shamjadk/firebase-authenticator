@@ -63,7 +63,7 @@ class LoginScreen extends HookConsumerWidget {
                   },
                 ),
                 InkWell(
-                  onTap: () => RouterController.pushAndReplace(
+                  onTap: () => RouterController.push(
                     context: context,
                     screen: SignupScreen(),
                   ),

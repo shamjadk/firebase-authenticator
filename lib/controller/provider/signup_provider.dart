@@ -31,7 +31,10 @@ class SignupNotifier extends Notifier<SignupProviderState> {
           email: email,
           password: password,
         );
-        RouterController.pushAndReplace(context: context, screen: LoginScreen());
+        RouterController.pushAndReplace(
+          context: context,
+          screen: LoginScreen(),
+        );
         popupMessage(context: context, message: "Log in now");
       }
     } on FirebaseAuthException catch (e) {
